@@ -383,12 +383,12 @@ extern "C" fn incoming_rtcp(handle: *mut PluginSession, video: c_int, buf: *mut 
     }
 }
 
-extern "C" fn incoming_data(handle: *mut PluginSession, buf: *mut c_char, len: c_int) {
+extern "C" fn incoming_data(handle: *mut PluginSession, label: *mut ch_char, buf: *mut c_char, len: c_int) {
     let sess = unsafe { Session::from_ptr(handle).expect("Session can't be null!") };
     let switchboard = STATE.switchboard.read().expect("Switchboard lock poisoned; can't continue.");
     let relay_data = gateway_callbacks().relay_data;
     for other in switchboard.data_recipients_for(&sess) {
-        relay_data(other.as_ptr(), buf, len);
+        relay_data(other.as_ptr(), label, buf, len);
     }
 }
 
@@ -725,7 +725,7 @@ extern "C" fn handle_message(handle: *mut PluginSession, transaction: *mut c_cha
 
 const PLUGIN: Plugin = build_plugin!(
     LibraryMetadata {
-        api_version: 10,
+        api_version: 13,
         version: 1,
         name: c_str!("Janus SFU plugin"),
         package: c_str!("janus.plugin.sfu"),
