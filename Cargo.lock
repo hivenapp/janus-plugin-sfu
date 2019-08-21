@@ -70,19 +70,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "jansson-sys"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/mozilla/janus-plugin-rs#57ddbccff1718e1d035d1726e8ebee8065e32fd9"
 
 [[package]]
 name = "janus-plugin"
 version = "0.11.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/mozilla/janus-plugin-rs#57ddbccff1718e1d035d1726e8ebee8065e32fd9"
 dependencies = [
  "bitflags 1.0.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "chrono 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "colored 1.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "glib-sys 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "jansson-sys 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "janus-plugin-sys 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "jansson-sys 0.1.0 (git+https://github.com/mozilla/janus-plugin-rs)",
+ "janus-plugin-sys 0.6.0 (git+https://github.com/mozilla/janus-plugin-rs)",
  "libc 0.2.47 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.84 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -92,7 +92,7 @@ name = "janus-plugin-sfu"
 version = "0.1.0"
 dependencies = [
  "atom 0.3.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "janus-plugin 0.11.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "janus-plugin 0.11.1 (git+https://github.com/mozilla/janus-plugin-rs)",
  "jsonwebtoken 5.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "multimap 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -105,10 +105,10 @@ dependencies = [
 [[package]]
 name = "janus-plugin-sys"
 version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/mozilla/janus-plugin-rs#57ddbccff1718e1d035d1726e8ebee8065e32fd9"
 dependencies = [
  "glib-sys 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "jansson-sys 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "jansson-sys 0.1.0 (git+https://github.com/mozilla/janus-plugin-rs)",
 ]
 
 [[package]]
@@ -293,9 +293,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum colored 1.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "6e9a455e156a4271e12fd0246238c380b1e223e3736663c7a18ed8b6362028a9"
 "checksum glib-sys 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "cdd7d911c5dc610aabe37caae7d3b9d2cfe6d8f4c85ff4c062f3d6f490e75067"
 "checksum itoa 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)" = "1306f3464951f30e30d12373d31c79fbd52d236e5e896fd92f96ec7babbbe60b"
-"checksum jansson-sys 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "8c71b62bcd47246aeb80d8559cfda53c85b494f5c31eb814113fef51afe67e2a"
-"checksum janus-plugin 0.11.1 (registry+https://github.com/rust-lang/crates.io-index)" = "d52ed22c3502ea069c3be98f1fd0363b0369dd43cdaa2ca7037fb0ebe15dca62"
-"checksum janus-plugin-sys 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)" = "4d3254f8932fbe67089748198c54ae06cff16b33503be38b6581adb0fe6678a7"
+"checksum jansson-sys 0.1.0 (git+https://github.com/mozilla/janus-plugin-rs)" = "<none>"
+"checksum janus-plugin 0.11.1 (git+https://github.com/mozilla/janus-plugin-rs)" = "<none>"
+"checksum janus-plugin-sys 0.6.0 (git+https://github.com/mozilla/janus-plugin-rs)" = "<none>"
 "checksum jsonwebtoken 5.0.1 (registry+https://github.com/rust-lang/crates.io-index)" = "8d438ea707d465c230305963b67f8357a1d56fcfad9434797d7cb1c46c2e41df"
 "checksum lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "a374c89b9db55895453a74c1e38861d9deec0b01b405a82516e9d5de4820dea1"
 "checksum libc 0.2.47 (registry+https://github.com/rust-lang/crates.io-index)" = "48450664a984b25d5b479554c29cc04e3150c97aa4c01da5604a2d4ed9151476"
